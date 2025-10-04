@@ -1,0 +1,19 @@
+# nest-backend
+initgit
+add
+README.mdgit
+commit
+-m
+first commit
+git
+branch
+-M
+maingit
+remote
+add
+origin
+https://github.com/isotop786/nest-backend.gitgit
+push
+-u
+origin
+main
