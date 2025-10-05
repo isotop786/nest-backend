@@ -71,7 +71,6 @@ export class AuthController {
     }
 
     // getting authentiacted user by jwt 
-    
     @Get('user')
     async user(@Req() request : Request){
         const cookie = request.cookies['jwt'];
@@ -82,5 +81,16 @@ export class AuthController {
 
         return user;
 
+    }
+
+    @Post('logout')
+    async logout(
+        @Res({passthrough:true}) response : Response
+    ){
+        response.clearCookie('jwt');
+
+        return {
+            message: "logout success"
+        }
     }
 }
